@@ -1,10 +1,10 @@
-import Contacts from "./components/moleculas/Contacts";
-import FAQSection from "./components/moleculas/FAQSection";
-import FeaturesSection from "./components/moleculas/Features";
-import Hero from "./components/moleculas/Hero";
-import ShowcaseSection from "./components/moleculas/Showcase";
-import { sectionWrap } from "./lib/classnames";
-import { SectionIds } from "./types/enums";
+import Contacts from "@/app/components/moleculas/Contacts";
+import FAQSection from "@/app/components/moleculas/FAQSection";
+import FeaturesSection from "@/app/components/moleculas/Features";
+import Hero from "@/app/components/moleculas/Hero";
+import ShowcaseSection from "@/app/components/moleculas/Showcase";
+import { sectionWrap } from "@/app/lib/classnames";
+import { SectionIds } from "@/app/types/enums";
 
 export default function Main() {
   return (

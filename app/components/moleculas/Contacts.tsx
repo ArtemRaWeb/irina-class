@@ -3,9 +3,10 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-import TelegramIcon from "@/assets/icons/telegram.svg";
-import VkIcon from "@/assets/icons/vk.svg";
-import WhatsappIcon from "@/assets/icons/whatsapp.svg";
+import TelegramIcon from "@/app/components/atoms/icons/TelegramIcon";
+import VkIcon from "@/app/components/atoms/icons/VkIcon";
+import WhatsappIcon from "@/app/components/atoms/icons/WhatsappIcon";
+import Image from "next/image.js";
 
 const CONTACTS = [
   {
@@ -37,13 +38,21 @@ export default function Contacts() {
       id="contacts"
       className="flex flex-col items-center px-4 text-center"
     >
-      <img
+      <Image
         src="/logo.png"
         alt="IRINA-CLASS"
         width={222}
         height={40}
         className="h-10 w-auto mb-10 select-none"
       />
+
+      {/* <img
+        src="/logo.png"
+        alt="IRINA-CLASS"
+        width={222}
+        height={40}
+        className="h-10 w-auto mb-10 select-none"
+      /> */}
 
       <h2 className="text-4xl font-bold mb-6">Свяжитесь с нами</h2>
       <p className="text-xl leading-[34px] text-gray-700 max-w-3xl">
@@ -76,7 +85,9 @@ export default function Contacts() {
                 transition-transform focus-visible:ring-2
                 focus-visible:ring-offset-2 focus-visible:ring-${color}/70`}
             >
-              <Icon className="w-10 h-10 text-white" />
+              <div className="w-10 h-10 text-white">
+                <Icon />
+              </div>
             </Link>
 
             <span className="mt-2 text-sm text-gray-600">{label}</span>
