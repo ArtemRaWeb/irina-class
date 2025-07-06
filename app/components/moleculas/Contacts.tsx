@@ -6,7 +6,7 @@ import Link from "next/link";
 import TelegramIcon from "@/app/components/atoms/icons/TelegramIcon";
 import VkIcon from "@/app/components/atoms/icons/VkIcon";
 import WhatsappIcon from "@/app/components/atoms/icons/WhatsappIcon";
-import Image from "next/image.js";
+import Image from "next/image";
 
 const CONTACTS = [
   {
@@ -39,20 +39,12 @@ export default function Contacts() {
       className="flex flex-col items-center px-4 text-center"
     >
       <Image
-        src="/logo.png"
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo.png`}
         alt="IRINA-CLASS"
         width={222}
         height={40}
         className="h-10 w-auto mb-10 select-none"
       />
-
-      {/* <img
-        src="/logo.png"
-        alt="IRINA-CLASS"
-        width={222}
-        height={40}
-        className="h-10 w-auto mb-10 select-none"
-      /> */}
 
       <h2 className="text-4xl font-bold mb-6">Свяжитесь с нами</h2>
       <p className="text-xl leading-[34px] text-gray-700 max-w-3xl">
